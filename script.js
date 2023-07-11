@@ -6,6 +6,13 @@ headerTitle.innerHTML='<h3> Heading </h3>';
 var header=document.getElementById('main-header');
 header.style.borderBottom='solid 3px #000';
 
-var tit=document.querySelector('.title');
-tit.style.fontWeight='bold';
-tit.style.color='green';
+
+
+var tit=document.querySelectorAll('.list-group-item');
+tit[2].style.backgroundColor='green'
+
+var lis=document.querySelectorAll('.list-group-item');
+console.log(lis)
+for(var i=0;i<lis.length;i++){
+    lis[i].style.fontWeight='bold';
+}
