@@ -32,14 +32,37 @@ header.style.borderBottom='solid 3px #000';
 // console.log(thirdItem);
 // Select all items in the item list
 
-var items = document.querySelectorAll("#items li");
-// Change the font color to green for the second item
-items[1].style.color = "green";
-// Select all items in the item list
-var items = document.querySelectorAll("#items li:nth-child(odd)");
-// Loop through the items and set the background color to green for odd elements
-for (var i = 0; i < items.length; i++) {
-//   if (i % 2 === 0) {
-    items[i].style.backgroundColor = "green";
-//   }
-}
+// var items = document.querySelectorAll("#items li");
+// // Change the font color to green for the second item
+// items[1].style.color = "green";
+// // Select all items in the item list
+// var items = document.querySelectorAll("#items li:nth-child(odd)");
+// // Loop through the items and set the background color to green for odd elements
+// for (var i = 0; i < items.length; i++) {
+// //   if (i % 2 === 0) {
+//     items[i].style.backgroundColor = "green";
+// //   }
+// }
+
+
+// Get the parent element of the header title
+var headerParent = document.getElementById("header-title").parentElement;
+
+// Create a new text node with the content "Hello"
+var helloTextNode = document.createTextNode("Hello");
+
+// Insert the helloTextNode before the header title
+headerParent.insertBefore(helloTextNode, document.getElementById("header-title"));
+
+// Get the parent element of the item list
+var itemListParent = document.getElementById("items");
+
+// Create a new list item element
+var newItem = document.createElement("li");
+
+// Set the text content of the new list item to "Hello Item 1"
+var newItemText = document.createTextNode("Hello Item 1");
+newItem.appendChild(newItemText);
+
+// Append the new list item as the first child of the item list
+itemListParent.insertBefore(newItem, itemListParent.firstChild);
