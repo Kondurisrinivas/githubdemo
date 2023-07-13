@@ -41,6 +41,9 @@ function addItem(e) {
     // Append edit button to li
     li.appendChild(editBtn);
 
+    // Add spacing to li element
+    li.style.marginBottom = '10px';
+
     // Append li to list
     itemList.appendChild(li);
 
@@ -87,6 +90,9 @@ function editItem(e) {
   saveBtn.appendChild(document.createTextNode('Save'));
   li.appendChild(saveBtn);
 
+  // Add spacing to input field
+  input.style.marginRight = '10px';
+
   // Add event listener to save button
   saveBtn.addEventListener('click', function () {
     saveItem(li, input.value.trim());
@@ -124,6 +130,9 @@ for (var i = 0; i < existingItems.length; i++) {
   editBtn.appendChild(document.createTextNode('Edit'));
   editBtn.addEventListener('click', editItem);
   existingItems[i].appendChild(editBtn);
+
+  // Add spacing to edit button
+  editBtn.style.marginRight = '10px';
 }
 
 // Filter Items
